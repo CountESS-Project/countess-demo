@@ -27,12 +27,13 @@ for sequence in sequences:
             bins[binn][repl].append(sequence)
 
 for binn, repls in bins.items():
-    for repl, seqs in enumerate(repls):
+    for repl, seqs in enumerate(repls,1):
         random.shuffle(seqs)
-        with open(f"vampseq_{binn}_{repl}.csv", "w") as fh:
-            fh.write("sequence,bin,repl\n")
-            for s in seqs:
-                fh.write(f"{s},{binn},{repl}\n")
+        with open(f"vampseq_{binn}_{repl}.fastq", "w") as fh:
+            for n, s in enumerate(seqs):
+                h = f"COUNTESS-TEST-DATA:{n}"
+                q = ('ZZZZ' + 'XYZZY' * (len(s)//5))[:len(s)]
+                fh.write(f"@{h}\n{s}\n+{h}\n{q}\n")
 
 stop_codons = ['TAA','TAG','TGA']
 reference = "ATG"
