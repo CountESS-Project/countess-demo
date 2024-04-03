@@ -1,21 +1,28 @@
 # CountESS Demo
 
-Demo files consist of randomly generated data.
-Any resemblance to organisms living or otherwise is coincidental.
-
-See [Getting Started with CountESS](https://countess-project.github.io/CountESS/getting-started/).
+Example files for the 
+[Getting Started with CountESS](https://countess-project.github.io/CountESS/getting-started/)
+document.
 
 ## Files
 
-`example_1.ini`, `example_2.ini`, `example_3.ini`
-: Demo config files for CountESS 
+`example_*.ini`
+: Example config files for CountESS 
 
-`sequences_1.csv`, `sequences_2.csv`, `barcodes.csv`
-: Random sequences for demos.
+`sequences_*.csv`, `barcodes.csv`, `vampseq_*.fastq`
+: Random sequences for examples.
 
 `script/make_sequences.py` 
-: Script which generates the random sequence files
+: Script which generates the example sequence files
 
 ## Downloading
 
-Download a ZIP of the latest version of these files [here](https://github.com/CountESS-Project/countess-demo/archive/refs/heads/main.zip)
+Either clone this repository or download a ZIP of the latest version of these files
+[here](https://github.com/CountESS-Project/countess-demo/archive/refs/heads/main.zip)
+
+## License
+
+These demo files are [licensed CC0](LICENSE.txt), and may be used in any way you like.
+
+Demo data files consist of randomly generated data.
+Any resemblance to organisms living or otherwise is coincidental.
