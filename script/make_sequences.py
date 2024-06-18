@@ -50,4 +50,14 @@ with open(f"barcodes.csv", "w") as fh:
         sequence = reference[0:offset] + random.choice("ACGT") + reference[offset+1:]
         fh.write(f"{barcode},{sequence}\n")
 
+with open(f"metadata.tsv", "r") as fh:
+    for line in fh:
+        filename, *_ = line.strip().split("\t")
+        with open(filename + ".fastq", "w") as fh2:
+            for n in range(0, 10000):
+                s = random.choice(seqs)
+                h = f"COUNTESS-TEST-DATA:{n}"
+                q = ('ZZZZ' + 'XYZZY' * (len(s)//5))[:len(s)]
+                fh2.write(f"@{h}\n{s}\n+{h}\n{q}\n")
+
 
