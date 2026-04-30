@@ -22,7 +22,15 @@ Either clone this repository or download a ZIP of the latest version of these fi
 
 ## License
 
-These demo files are [licensed CC0](LICENSE.txt), and may be used in any way you like.
+### Example 1 .. 4
 
-Demo data files consist of randomly generated data.
+Data files in directories `example_1`, `example_2`, `example_3` and `example_4`
+are [licensed CC0](LICENSE.txt), and may be used in any way you like.
+
+These data files consist of randomly generated data.
 Any resemblance to organisms living or otherwise is coincidental.
+
+### Example 5
+
+Data files in directory `example_5` are copied from [Enrich2-Examples](https://github.com/FowlerLab/Enrich2),
+see the `example_5/README.md` and `example_5/LICENSE.txt` files for more information.
