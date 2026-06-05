@@ -18,10 +18,10 @@ with open("sequences_2.csv", "w") as fh:
     for s in sequences2:
         fh.write(f"{s},2\n")
 
-bins = {1: [[], []], 2: [[], []], 3: [[], []], 4: [[], []]}
+bins = {1: [[], [], []], 2: [[], [], []], 3: [[], [], []], 4: [[], [], []]}
 for sequence in sequences:
     val = random.uniform(1,4)
-    for repl in [0,1]:
+    for repl in [0,1,2]:
         for _ in range(0, random.randint(100,151)):
             binn = max(min(round(random.normalvariate(mu=val, sigma=1)),4),1)
             bins[binn][repl].append(sequence)
